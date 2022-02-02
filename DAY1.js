@@ -54,3 +54,50 @@
 
 //BTW, when inputs are small inneficent code and efficent one acts same, but with too much
 //inputs they differ widely!.
+
+//3.
+//Let's measure code performance by counting how many steps it takes to return an answer
+
+//here we have 2 functions which does exactly the same thing, it takes number and
+// returns sum up to that number
+
+//UNOPTIMIZED code:
+const sum = (n) => {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+};
+
+//the loop in function is dependent on n(number we want to sum up to)
+//if n = 6 it means that i will be added to total 6 times, which means 6 operations
+//if n = 100 it means that i will be added to total 100 times, which means 100 operations
+//if n = 100000000 it means that i will be added to total 100000000 times, which means 100000000 operations
+//which means that complexity of this code is O(n)
+//IMPORTANT: if loop body had more lines it time coplexity would be: O(number of lines * n)
+
+//OPTIMIZED code:
+const optSum = (n) => {
+  return (n * (n + 1)) / 2;
+};
+
+//there we have only 3 operations *(multiplication), +(addition) and /(division).
+//also this code isn't dependent on n(number we want to sum up to)
+//that means time complexity of this code is O(3)
+// that means if n = 100000000 total number of operations will still reamin 3.
+
+//if we hard measure time, unoptimized code will take much more time to return an answer than optimized one as number of
+//operations is much grater than in second optimized code:
+
+let t1, t2;
+
+t1 = Date.now();
+optSum(2000000000);
+t2 = Date.now();
+console.log(`Optimized code took: ${(t2 - t1) / 1000} seconds`);
+
+t1 = Date.now();
+sum(2000000000);
+t2 = Date.now();
+console.log(`Unoptimized code took: ${(t2 - t1) / 1000} seconds`);
