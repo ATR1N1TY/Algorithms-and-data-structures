@@ -96,3 +96,13 @@ const codeFour = (arr) => {
 //operation
 
 //we will see logarithmic complexity code in the upcomming days!.
+
+//8.
+
+//Tommorow we are starting algorithms itself
+
+//take this things with you:
+
+//1. in intervies they will give you harder problems to solve with DS's&A's
+//2. algorithms are hard it should take some time to learn but with First principles method you can learn with ease
+//and 3. to retain this information after the initial learning you should practise practise practise always!
