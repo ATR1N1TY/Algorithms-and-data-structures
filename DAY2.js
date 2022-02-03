@@ -27,3 +27,59 @@
 // O(n^2) --> quadratic time complexity
 // O(n^3) --> cubic time complexity
 //etc...
+
+//6.
+
+//Space complexity means how much RAM does code take, unlike time complexity which means how much CPU does the code take
+//for basic types like: integers and booleans
+//asigning a variable's space complexity is O(1) which means var a = 100 & var a = 200 take same space(roughly)
+
+//for lists, objects and strings take O(n) space complexity which means taken space on RAM is dependent on how many
+//elements do we have in the array, how much key-value pairs we have in an object or hom many charachters we have in
+//a string
+
+//lets compare space complexity of a codes:
+
+const codeOne = (n) => {
+  for (let i = 0; i < n; i++) {
+    console.log("code 1");
+  }
+};
+
+//Space complexity of this code is O(1), because there's no any variable assigned to something
+//but let i = 0 means that only one variable is assigned to somthing and value of i changes as the loop iterates.
+
+const codeTwo = (arr) => {
+  let total = 0;
+  arr.forEach((num) => {
+    total += num;
+  });
+};
+
+//there's only one variable declaired and assigned and every element of an array is added to that so it means O(1)
+
+const codeThree = (str) => {
+  let reverseStr = "";
+  for (let i = 0; i < str.length; i++) {
+    reverseStr = str[i] + reverseStr;
+  }
+  return reverseStr;
+};
+
+//there's one variable declaired, but the size of variable increases as str charachters approach to infinity
+//so it means O(n)
+
+const codeFour = (arr) => {
+  let resArr = [];
+  arr.forEach((item) => {
+    if (Math.random() < 0.5) {
+      resArr.push(item);
+    }
+  });
+  return resArr;
+};
+
+//here we have one list and we add roughly the half of the items in the inputed array
+//in worst cases it's O(n)
+
+//remember, you should always prioritize time complexity over space one, becouse it can cost much more
