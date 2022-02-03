@@ -83,3 +83,16 @@ const codeFour = (arr) => {
 //in worst cases it's O(n)
 
 //remember, you should always prioritize time complexity over space one, becouse it can cost much more
+
+//7.
+
+// one of the most interesting complexities are logarithmic complexities
+//Generally we have 2 logarithmic complexities: n log n and log n
+
+//and it's the opposite of quadratic complexity:
+//log of base 2 and n of 8 = 3; log of base 2 and n of 16 = 4
+
+//we can think logarithmic complexities as if the number of input is doubled then we only have to do one more
+//operation
+
+//we will see logarithmic complexity code in the upcomming days!.
