@@ -20,4 +20,22 @@ const fizzBuzz = (n) => {
   }
 };
 
+const fizzBuzz = (n) => {
+  for (let i = 1; i < n; i++) {
+    let word = "";
+
+    if (i % 3 === 0) {
+      word += "fizz";
+    }
+
+    if (i % 5 === 0) {
+      word += "buzz";
+    }
+    if ((str = "")) {
+      word = i;
+    }
+    console.log(word);
+  }
+};
+
 fizzBuzz(50);
